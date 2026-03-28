@@ -1,260 +1,222 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Emerald Auto Detailing | Showroom Shine, Every Time</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Playfair+Display:wght@700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>Emerald Auto Detailing | Showroom Shine, Every Time</title>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+      <!-- Google Fonts: Primary & Alternative Options -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+      <!-- Preconnect for free fonts (optional) -->
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+      <script>
+         tailwind.config = {
             darkMode: "class",
             theme: {
-                extend: {
-                    colors: {
-                        primary: "#045D3B", // Emerald Green from logo
-                        secondary: "#D1C7B7", // Cream/Beige tone from logo background
-                        "background-light": "#F9F7F2",
-                        "background-dark": "#0F1713",
-                    },
-                    fontFamily: {
-                        display: ["Playfair Display", "serif"],
-                        body: ["Montserrat", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                    },
-                },
+               extend: {
+                  colors: {
+                     primary: "#045D3B",        // Emerald Green from logo
+                     secondary: "#D1C7B7",      // Cream/Beige tone from logo background
+                     "background-light": "#F9F7F2",
+                     "background-dark": "#0F1713",
+                     "emerald-hero": "#045D3B", // explicit emerald hero bg
+                     
+                     // Add your new cream color here
+                     cream: "#F5F2E8",          // R:245, G:242, B:232
+                     
+                     // You can also add semantic variants if needed
+                     cream: {
+                        50: "#FDFCF9",
+                        100: "#FBF9F4",
+                        200: "#F5F2E8",  // your exact cream color
+                        300: "#EFEBDC",
+                        400: "#E9E4D0",
+                        500: "#E3DDC4",
+                        DEFAULT: "#F5F2E8",     // makes 'cream' refer to this shade
+                     }
+                  },
+                  fontFamily: {
+                     display: ["Playfair Display", "serif"],
+                     body: ["Montserrat", "sans-serif"],
+                     altHeading: ["Space Grotesk", "sans-serif"],
+                     altBody: ["Manrope", "sans-serif"],
+                     premium: ["Plus Jakarta Sans", "sans-serif"],
+                  },
+                  borderRadius: {
+                     DEFAULT: "0.5rem",
+                  },
+               },
             },
-        };
-    </script>
-<style>
-        body { font-family: 'Montserrat', sans-serif; }
-        .hero-gradient {
-            background: linear-gradient(rgba(4, 93, 59, 0.7), rgba(15, 23, 19, 0.9)), url('https://images.unsplash.com/photo-1603584173870-7f30df44299d?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-20">
-<div class="flex items-center gap-3">
-<img alt="Emerald Auto Detailing Logo" class="h-14 w-14 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi94H6e-klOkQiBNzbyNF2NFO778_NMiP7v4rqcrK39fKxuqRl5GOQCUEOG4sBiBe6tY0Pmnp8Gfu7LUezZB4Xe8X3POKjJcDVtkyz482Nv7BkD7LcRQco1NwaQTxI8M1AWQ7aSB02uxFqazhBOmxxKTJ29-DzKyLYT4MiYLSbULeWq4cs3l_bvJ_dqMPd-bbMqv_AVXjRYEm2EyFxmPMmXfzDWxhw3VENSkhmSs2jN6qtrlcYV0WWnrhQHdiKyQ7nVlOn_2VS0Le5"/>
-<span class="font-display text-xl font-bold tracking-tight text-primary dark:text-white uppercase">Emerald Detailing</span>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#gallery">Gallery</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
-<a class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg" href="#">Book Now</a>
-</div>
-<div class="md:hidden">
-<span class="material-icons-outlined text-3xl">menu</span>
-</div>
-</div>
-</div>
-</nav>
-<section class="relative h-[85vh] flex items-center overflow-hidden">
-<div class="absolute inset-0 hero-gradient"></div>
-<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-<div class="max-w-3xl">
-<h1 class="font-display text-5xl md:text-7xl font-black text-white leading-tight mb-6">
-                    Showroom Shine, <br/><span class="text-emerald-400 italic">Every Time.</span>
-</h1>
-<p class="text-xl text-slate-200 mb-8 max-w-xl">
-                    Experience the ultimate luxury car care. From precision interior rejuvenation to high-gloss exterior protection, we treat your vehicle like a gem.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-primary hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-lg text-center transition-all transform hover:scale-105 shadow-xl" href="#">
-                        Schedule an Appointment
-                    </a>
-<a class="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-full font-bold text-lg text-center backdrop-blur-sm transition-all" href="#services">
-                        View Our Services
-                    </a>
-</div>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-<span class="material-icons-outlined text-white text-4xl">expand_more</span>
-</div>
-</section>
-<section class="py-24 bg-white dark:bg-background-dark/50" id="services">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-<h2 class="font-display text-4xl font-bold mb-4">Premium Detailing Services</h2>
-<div class="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
-<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We provide meticulous attention to detail using only the finest products to ensure your vehicle looks better than new.</p>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
-<div class="group relative bg-background-light dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500 overflow-hidden">
-<div class="absolute -right-10 -top-10 text-primary/5 group-hover:text-primary/10 transition-colors">
-<span class="material-icons-outlined text-[200px]">minor_crash</span>
-</div>
-<div class="relative z-10">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-icons-outlined text-4xl">clean_hands</span>
-</div>
-<h3 class="font-display text-2xl font-bold mb-4">Exterior Detailing</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                        Complete rejuvenation of your car's exterior surface. Including hand wash, clay bar treatment, paint correction, and premium ceramic coating for lasting brilliance and protection.
-                    </p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> 3-Stage Paint Correction</li>
-<li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Nano-Ceramic Coating</li>
-<li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Wheel &amp; Tire Deep Clean</li>
-</ul>
-<button class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
-                        View Details <span class="material-icons-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="group relative bg-background-light dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500 overflow-hidden">
-<div class="absolute -right-10 -top-10 text-primary/5 group-hover:text-primary/10 transition-colors">
-<span class="material-icons-outlined text-[200px]">airline_seat_recline_extra</span>
-</div>
-<div class="relative z-10">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-icons-outlined text-4xl">vacuum</span>
-</div>
-<h3 class="font-display text-2xl font-bold mb-4">Interior Restoration</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                        Breathe new life into your cabin. We perform deep steam cleaning, leather conditioning, and detailed vacuuming to ensure a hygienic and fresh environment.
-                    </p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Hot Water Carpet Extraction</li>
-<li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Leather Deep Condition</li>
-<li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Odor Neutralization</li>
-</ul>
-<button class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
-                        View Details <span class="material-icons-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-background-light dark:bg-background-dark" id="gallery">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-<h2 class="font-display text-4xl font-bold mb-4">Our Transformations</h2>
-<div class="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
-<p class="text-slate-600 dark:text-slate-400">Seeing is believing. Browse our latest "Before &amp; After" results.</p>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative aspect-square overflow-hidden rounded-3xl cursor-pointer">
-<img alt="Detailed black car reflecton" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX11fbODR9AOZPk8RNWtf-dQ8KrKb-3DY3YEEnWpS3vGRYJMfvM_pLokfVfpVgbHjVf3ssXGLbSmxoeYkdBiaB38MXiaRrqzUECTj6MDmI283tOsi3XTJDtiSXLV916V6jMoEt01UfkhI6Z1-9EYrdHxHR9t8ARJCY9KImVuTSmvIjMAkzYnRKPvKYlFZv5ZfijT0R-4pIh87osKHViCFe8Br5Q688la6_9h9xtUweZj_bbedMZbm5oa68YttLrZamQaX_OcoTidTy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-<div>
-<p class="text-white font-bold text-lg">Mirror Finish Correction</p>
-<p class="text-emerald-200 text-sm">Luxury Sedan</p>
-</div>
-</div>
-</div>
-<div class="group relative aspect-square overflow-hidden rounded-3xl cursor-pointer">
-<img alt="Detailed sports car exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtGod23V4tqFx2GdDQ0PPk8vkJf4_CUp9uK952ctqAyHvSmTo7ChcndgZwHf3NUn2R-qId2T6m0ZSm79Xg-lS4ijLWDp0NDEuAIsgEgV7y2bUltd3YyySSFJomLnfOX-_5-DuVcgg7sS_PcjYbrDtB7dGzvbEAIaB_LAcgfJGsinnQ06-gSAoZzp3PLb9oUEgMzEUQrYTedUai2GgwBTXttVeCX3kmTlgVcRVU_4rnwTWvG4ApcWAB33GjEMPj2LZZnbRO06CpYPXM"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-<div>
-<p class="text-white font-bold text-lg">Ceramic Shield Applied</p>
-<p class="text-emerald-200 text-sm">Supercar Package</p>
-</div>
-</div>
-</div>
-<div class="group relative aspect-square overflow-hidden rounded-3xl cursor-pointer">
-<img alt="Clean car interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa3DqPpWav7r9udLAPMRD9xlNnYuhVk-WfjadooQmD-GTq9_86RBTIdZ8zod1nF4MiWTJ92e8L_8rSseZpo8hfEQEDElW4fFKFRm2E3KgS88ACHVQmKWRnn-q3-mZsE4rrT_Bgeg01JxQb9QO_wkEqfZS0Lw5RykzIyI33oLBiEZz8h8GqmSs4jlI0RsI_4VxTO9wRxCr--ajvk2R9dyE2-58MQZ0yTQbkzRpVDkQ9xAh-gA9gwfAa9Tz3hOXZ6S9hLmtVW2gMMsoo"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-<div>
-<p class="text-white font-bold text-lg">Interior Revival</p>
-<p class="text-emerald-200 text-sm">Full Leather Treatment</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 relative overflow-hidden" id="testimonials">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="bg-primary rounded-[3rem] p-12 md:p-20 text-white relative">
-<div class="absolute top-10 right-10 opacity-10">
-<span class="material-icons-outlined text-[150px]">format_quote</span>
-</div>
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h2 class="font-display text-4xl md:text-5xl font-bold mb-6">What our clients say about the Emerald touch.</h2>
-<div class="flex gap-1 text-emerald-400 mb-8">
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-</div>
-</div>
-<div class="space-y-8">
-<div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
-<p class="italic text-lg mb-4">"Absolutely the best detailer in the city. My Porsche looks like it just rolled off the factory floor. The attention to detail on the interior was mind-blowing!"</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-emerald-700"></div>
-<div>
-<p class="font-bold">Julian R.</p>
-<p class="text-emerald-300 text-sm">Verified Customer</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<footer class="bg-slate-900 text-slate-400 pt-20 pb-10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-3 mb-6">
-<img alt="Emerald Auto Detailing Logo" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcCe9qiGgbwfgYP5jPyW50QawZIS0w5eTWi6pZ_JP-rBh-vFxqdoI7VQ3GfC_Qnsk_4yL5gEuazEQoQtM-TY44b_H_4Rhl-hN7kpS3ro9ZDCZl9smo6UERggzXB53xB_pxbk4XdExRHDZ-nBqsvsPZrhUr4gU9ehuUEYe_nvZAKZTB0QNiGJBVQusfrkgyVPuJKkH08V_UxvHQ2xZxlzM9FPp93vPcGKFZlkGemRjk7PoAElVIwusd4hOTRBCBExnUHzrysU579dQK"/>
-<span class="font-display text-white text-xl font-bold uppercase tracking-tight">Emerald</span>
-</div>
-<p class="text-sm leading-relaxed mb-6">Setting the gold standard in premium car care. We treat every vehicle with the precision it deserves.</p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-icons-outlined text-white text-sm">facebook</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-icons-outlined text-white text-sm">camera_alt</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6">Quick Links</h4>
-<ul class="space-y-4 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
-<li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="#gallery">Gallery</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Book Appointment</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6">Services</h4>
-<ul class="space-y-4 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Exterior Waxing</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Ceramic Coating</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Steam Cleaning</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Paint Correction</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6">Contact Us</h4>
-<ul class="space-y-4 text-sm">
-<li class="flex items-center gap-3"><span class="material-icons-outlined text-primary">location_on</span> 123 Detailer's Row, Auto City</li>
-<li class="flex items-center gap-3"><span class="material-icons-outlined text-primary">call</span> (555) 123-4567</li>
-<li class="flex items-center gap-3"><span class="material-icons-outlined text-primary">mail</span> info@emeraldautodetailing.com</li>
-</ul>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800 text-center text-xs">
-<p>© 2024 Emerald Auto Detailing. All rights reserved. Designed with precision.</p>
-</div>
-</footer>
-<div class="md:hidden fixed bottom-6 right-6 z-50">
-<button class="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center justify-center">
-<span class="material-icons-outlined">calendar_today</span>
-</button>
-</div>
+         };
+      </script>
+      <style>
+         /* 3-space tab indentation for all custom CSS */
+         body { font-family: 'Montserrat', sans-serif; }
+         
+         /* Alternative style classes for font switching demo (optional) */
+         .font-alt-heading { font-family: 'Space Grotesk', sans-serif; }
+         .font-alt-body { font-family: 'Manrope', sans-serif; }
+         
+         /* Emerald green solid background for hero variations (clean solid) */
+         .hero-emerald-solid {
+               background-color: #045D3B;
+         }
+         /* Subtle pattern overlay for variation 2 */
+         .hero-emerald-pattern {
+               background-color: #045D3B;
+               background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+               background-size: 32px 32px;
+         }
+         /* Gradient with shine effect */
+         .hero-emerald-gradient-shine {
+               background: linear-gradient(135deg, #045D3B 0%, #026a43 50%, #045D3B 100%);
+         }
+         /* Shared square image container styling */
+         .logo-square-frame {
+               background: rgba(255,255,255,0.12);
+               backdrop-filter: blur(2px);
+               border-radius: 28px;
+               padding: 12px;
+               box-shadow: 0 25px 40px -12px rgba(0,0,0,0.35);
+         }
+         .logo-square-inner {
+               background: white;
+               border-radius: 20px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05), 0 8px 20px rgba(0,0,0,0.1);
+         }
+      </style>
+   </head>
+   
+   <body class="bg-cream dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+   
+   <!-- ========== NAVBAR COMPONENT (separate structure, sticky) ========== -->
+   <nav class="sticky top-0 z-50 bg-cream dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="flex justify-between items-center h-20">
+            <div class="flex items-center gap-3">
+               <img alt="Emerald Auto Detailing Logo" class="h-14 w-14 object-contain" src="/assets/logo.png"/>
+               <span class="font-display text-xl font-bold tracking-tight text-primary dark:text-white uppercase">Emerald Detailing</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+               <a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
+               <a class="text-sm font-semibold hover:text-primary transition-colors" href="#gallery">Gallery</a>
+               <a class="text-sm font-semibold hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+               <a class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg" href="#">Book Now</a>
+            </div>
+            <div class="md:hidden">
+               <span class="material-icons-outlined text-3xl">menu</span>
+            </div>
+         </div>
+      </div>
+   </nav>
+   
+   <!-- HERO -->
+   <section class="hero-emerald-gradient-shine w-full py-20 md:py-28 flex items-center relative shadow-inner">
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+         <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-white/10 blur-3xl"></div>
+         <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-emerald-900/40 blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+         <div class="flex flex-col lg:flex-row items-center gap-14">
+         <div class="flex-1 text-center lg:text-left">
+               <h1 class="font-premium text-5xl md:text-7xl font-extrabold text-white leading-[1.2] mb-6">
+                  Where <span class="text-emerald-200 underline decoration-emerald-400">Cars Become</span><br/>Art.
+               </h1>
+               <p class="text-white/90 text-lg max-w-xl mb-8 font-body">
+                  From paint correction to showroom gloss — we deliver the ultimate detailing experience.
+               </p>
+               <div class="flex gap-4 flex-wrap justify-center lg:justify-start">
+                  <a class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-transform" href="#">Book Appointment</a>
+                  <a class="bg-primary/80 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary transition" href="/gallery/">Gallery</a>
+               </div>
+         </div>
+         <div class="w-72 h-72 md:w-84 md:h-84 lg:w-96 lg:h-96 flex-shrink-0 logo-square-frame bg-white/10 border border-white/30">
+               <div class="logo-square-inner w-full h-full bg-cream rounded-2xl flex items-center justify-center">
+                  <img alt="Emerald Logo Square" class="w-4/5 h-4/5 object-contain" src="/assets/logo.png"/>
+               </div>
+         </div>
+         </div>
+      </div>
+   </section>
+   
+   <!-- Services Section (unchanged but keeps consistency) -->
+   <section class="py-24 bg-white dark:bg-background-dark/50" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+         <h2 class="font-display text-4xl font-bold mb-4">Detailing Services Offered</h2>
+         <div class="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
+         <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We provide meticulous attention to detail using only the finest products to ensure your vehicle looks better than new.</p>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
+         <div class="group relative bg-background-light dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500 overflow-hidden">
+         <div class="absolute -right-10 -top-10 text-primary/5 group-hover:text-primary/10 transition-colors">
+               <span class="material-icons-outlined text-[200px]">minor_crash</span>
+         </div>
+         <div class="relative z-10">
+               <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary"><span class="material-icons-outlined text-4xl">clean_hands</span></div>
+               <h3 class="font-display text-2xl font-bold mb-4">Exterior Detailing</h3>
+               <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Complete rejuvenation of your car's exterior surface. Including hand wash, clay bar treatment, paint correction, and premium ceramic coating for lasting brilliance.</p>
+               <ul class="space-y-3 mb-8"><li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> 3-Stage Paint Correction</li><li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Nano-Ceramic Coating</li><li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Wheel & Tire Deep Clean</li></ul>
+               <button class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">View Details <span class="material-icons-outlined">arrow_forward</span></button>
+         </div>
+         </div>
+         <div class="group relative bg-background-light dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500 overflow-hidden">
+         <div class="absolute -right-10 -top-10 text-primary/5 group-hover:text-primary/10 transition-colors"><span class="material-icons-outlined text-[200px]">airline_seat_recline_extra</span></div>
+         <div class="relative z-10">
+               <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary"><span class="material-icons-outlined text-4xl">vacuum</span></div>
+               <h3 class="font-display text-2xl font-bold mb-4">Interior Restoration</h3>
+               <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Breathe new life into your cabin. Deep steam cleaning, leather conditioning, and detailed vacuuming ensure a hygienic environment.</p>
+               <ul class="space-y-3 mb-8"><li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Hot Water Carpet Extraction</li><li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Leather Deep Condition</li><li class="flex items-center gap-2 text-sm font-medium"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Odor Neutralization</li></ul>
+               <button class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">View Details <span class="material-icons-outlined">arrow_forward</span></button>
+         </div>
+         </div>
+      </div>
+   </section>
 
-</body></html>
+   <!-- Gallery section (quick reference) -->
+   <section class="py-24 bg-background-light dark:bg-background-dark" id="gallery">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+         <h2 class="font-display text-4xl font-bold mb-4">Our Transformations</h2>
+         <div class="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
+         <p class="text-slate-600 dark:text-slate-400">Seeing is believing. Browse our latest "Before & After" results.</p>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="group relative aspect-square overflow-hidden rounded-3xl cursor-pointer"><img alt="Detailed black car reflecton" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX11fbODR9AOZPk8RNWtf-dQ8KrKb-3DY3YEEnWpS3vGRYJMfvM_pLokfVfpVgbHjVf3ssXGLbSmxoeYkdBiaB38MXiaRrqzUECTj6MDmI283tOsi3XTJDtiSXLV916V6jMoEt01UfkhI6Z1-9EYrdHxHR9t8ARJCY9KImVuTSmvIjMAkzYnRKPvKYlFZv5ZfijT0R-4pIh87osKHViCFe8Br5Q688la6_9h9xtUweZj_bbedMZbm5oa68YttLrZamQaX_OcoTidTy"/><div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"><div><p class="text-white font-bold text-lg">Mirror Finish Correction</p><p class="text-emerald-200 text-sm">Luxury Sedan</p></div></div></div>
+         <div class="group relative aspect-square overflow-hidden rounded-3xl cursor-pointer"><img alt="Detailed sports car exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtGod23V4tqFx2GdDQ0PPk8vkJf4_CUp9uK952ctqAyHvSmTo7ChcndgZwHf3NUn2R-qId2T6m0ZSm79Xg-lS4ijLWDp0NDEuAIsgEgV7y2bUltd3YyySSFJomLnfOX-_5-DuVcgg7sS_PcjYbrDtB7dGzvbEAIaB_LAcgfJGsinnQ06-gSAoZzp3PLb9oUEgMzEUQrYTedUai2GgwBTXttVeCX3kmTlgVcRVU_4rnwTWvG4ApcWAB33GjEMPj2LZZnbRO06CpYPXM"/><div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"><div><p class="text-white font-bold text-lg">Ceramic Shield Applied</p><p class="text-emerald-200 text-sm">Supercar Package</p></div></div></div>
+         <div class="group relative aspect-square overflow-hidden rounded-3xl cursor-pointer"><img alt="Clean car interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa3DqPpWav7r9udLAPMRD9xlNnYuhVk-WfjadooQmD-GTq9_86RBTIdZ8zod1nF4MiWTJ92e8L_8rSseZpo8hfEQEDElW4fFKFRm2E3KgS88ACHVQmKWRnn-q3-mZsE4rrT_Bgeg01JxQb9QO_wkEqfZS0Lw5RykzIyI33oLBiEZz8h8GqmSs4jlI0RsI_4VxTO9wRxCr--ajvk2R9dyE2-58MQZ0yTQbkzRpVDkQ9xAh-gA9gwfAa9Tz3hOXZ6S9hLmtVW2gMMsoo"/><div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"><div><p class="text-white font-bold text-lg">Interior Revival</p><p class="text-emerald-200 text-sm">Full Leather Treatment</p></div></div></div>
+      </div>
+   </section>
+
+   <!-- ========== FOOTER COMPONENT (separate, background same emerald green as hero = #045D3B) ========== -->
+   <footer class="bg-emerald-hero text-emerald-50 pt-16 pb-8 border-t border-emerald-800/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+         <div class="col-span-1">
+         <div class="flex items-center gap-3 mb-5">
+               <img alt="Emerald Auto Detailing Logo" class="h-12 w-12 bg-white rounded-full p-1 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcCe9qiGgbwfgYP5jPyW50QawZIS0w5eTWi6pZ_JP-rBh-vFxqdoI7VQ3GfC_Qnsk_4yL5gEuazEQoQtM-TY44b_H_4Rhl-hN7kpS3ro9ZDCZl9smo6UERggzXB53xB_pxbk4XdExRHDZ-nBqsvsPZrhUr4gU9ehuUEYe_nvZAKZTB0QNiGJBVQusfrkgyVPuJKkH08V_UxvHQ2xZxlzM9FPp93vPcGKFZlkGemRjk7PoAElVIwusd4hOTRBCBExnUHzrysU579dQK"/>
+               <span class="font-display text-white text-xl font-bold uppercase tracking-tight">Emerald</span>
+         </div>
+         <p class="text-emerald-100/80 text-sm leading-relaxed mb-5">Setting the gold standard in premium car care. We treat every vehicle with the precision it deserves.</p>
+         <div class="flex gap-3">
+               <a class="w-9 h-9 rounded-full bg-emerald-800 flex items-center justify-center hover:bg-emerald-700 transition" href="#"><span class="material-icons-outlined text-white text-sm">facebook</span></a>
+               <a class="w-9 h-9 rounded-full bg-emerald-800 flex items-center justify-center hover:bg-emerald-700 transition" href="#"><span class="material-icons-outlined text-white text-sm">camera_alt</span></a>
+         </div>
+         </div>
+         <div><h4 class="text-white font-bold mb-5 text-lg">Quick Links</h4><ul class="space-y-3 text-sm"><li><a class="hover:text-white transition-colors" href="#">Home</a></li><li><a class="hover:text-white transition-colors" href="#services">Services</a></li><li><a class="hover:text-white transition-colors" href="#gallery">Gallery</a></li><li><a class="hover:text-white transition-colors" href="#">Book Appointment</a></li></ul></div>
+         <div><h4 class="text-white font-bold mb-5 text-lg">Services</h4><ul class="space-y-3 text-sm"><li><a class="hover:text-white transition-colors" href="#">Exterior Waxing</a></li><li><a class="hover:text-white transition-colors" href="#">Ceramic Coating</a></li><li><a class="hover:text-white transition-colors" href="#">Steam Cleaning</a></li><li><a class="hover:text-white transition-colors" href="#">Paint Correction</a></li></ul></div>
+         <div><h4 class="text-white font-bold mb-5 text-lg">Contact Us</h4><ul class="space-y-3 text-sm"><li class="flex items-center gap-2"><span class="material-icons-outlined text-emerald-300 text-base">location_on</span> 123 Detailer's Row, Auto City</li><li class="flex items-center gap-2"><span class="material-icons-outlined text-emerald-300 text-base">call</span> (555) 123-4567</li><li class="flex items-center gap-2"><span class="material-icons-outlined text-emerald-300 text-base">mail</span> info@emeraldautodetailing.com</li></ul></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t border-emerald-700/40 text-center text-emerald-200/70 text-xs">
+         <p>© 2025 Emerald Auto Detailing. All rights reserved. Designed with precision.</p>
+      </div>
+   </footer>
+
+   <!-- Mobile floating button (optional) -->
+   <div class="md:hidden fixed bottom-6 right-6 z-50">
+      <button class="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center justify-center"><span class="material-icons-outlined">calendar_today</span></button>
+   </div>
+   <!-- Font notes: Alternative free fonts (Space Grotesk, Manrope) are loaded via Google Fonts and can be downloaded; they are used in hero sections as demonstration -->
+   </body>
+</html>
